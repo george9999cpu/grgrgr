@@ -26,6 +26,11 @@ public class player0_script : MonoBehaviour
     {
 
 
+Debug.Log("Grounded: " + grounded + " | Speed: " + GetComponent<Rigidbody2D>().velocity.x);
+
+anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+             anim.SetFloat("Height", GetComponent<Rigidbody2D>().velocity.y);
+           anim.SetBool("Grounded", grounded);
         
 
 
@@ -48,9 +53,7 @@ public class player0_script : MonoBehaviour
         GetComponent<SpriteRenderer>().flipX=false;
       }
 
-       anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-             anim.SetFloat("Height", GetComponent<Rigidbody2D>().velocity.y);
-           anim.SetBool("Grounded", grounded);
+       
     }
 
 
